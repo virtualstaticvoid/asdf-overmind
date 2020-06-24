@@ -27,7 +27,7 @@ install_plugin() {
 }
 
 get_platform() {
-  [ "Linux" = "$(uname)" ] && echo "linux" || echo "darwin"
+  [ "Linux" = "$(uname)" ] && echo "linux" || echo "macos"
 }
 
 get_download_url() {
