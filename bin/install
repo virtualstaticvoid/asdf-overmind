@@ -2,7 +2,7 @@
 
 set -e
 set -o pipefail
-set -x
+# set -x
 
 ASDF_INSTALL_TYPE=${ASDF_INSTALL_TYPE:-version}
 [ -n "$ASDF_INSTALL_VERSION" ] || (>&2 echo 'Missing ASDF_INSTALL_VERSION' && exit 1)
