@@ -1,6 +1,6 @@
 # asdf-overmind
 
-[![Build Status](https://travis-ci.org/virtualstaticvoid/asdf-overmind.svg?branch=master)](https://travis-ci.org/virtualstaticvoid/asdf-overmind)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/virtualstaticvoid/asdf-overmind/Main%20Workflow?style=flat-square)](https://github.com/virtualstaticvoid/asdf-overmind/actions)
 
 [`overmind`][util] plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
