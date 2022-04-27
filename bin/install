@@ -43,11 +43,33 @@ get_platform() {
   esac
 }
 
+get_arch() {
+  local arch=$(uname -m)
+  case $arch in
+    amd64 | x86_64)
+      echo "amd64"
+      ;;
+    arm64)
+      echo "arm64"
+      ;;
+    arm)
+      echo "arm"
+      ;;
+    i386 | i686)
+      echo "386"
+      ;;
+    *)
+      echo ""
+  esac
+}
+
 get_download_url() {
   local install_type=$1
   local tag=$2
   local version=$2
+
   local platform=$(get_platform)
+  local arch=$(get_arch)
 
   # HACK: asdf wants numeric version numbers, but most start with a "v"
   # since people usually tag releases in GitHub with a vX.X.X and _not_ X.X.X
@@ -57,7 +79,7 @@ get_download_url() {
     tag="v${tag}"
   fi
 
-  echo "https://github.com/DarthSim/overmind/releases/download/${tag}/overmind-${tag}-${platform}-amd64.gz"
+  echo "https://github.com/DarthSim/overmind/releases/download/${tag}/overmind-${tag}-${platform}-${arch}.gz"
 }
 
 install_plugin "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
