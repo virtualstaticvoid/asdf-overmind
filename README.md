@@ -8,6 +8,7 @@
 
 ```
 asdf plugin-add overmind https://github.com/virtualstaticvoid/asdf-overmind.git
+asdf install overmind latest
 ```
 
 ## Use
